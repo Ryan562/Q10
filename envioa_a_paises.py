@@ -2,13 +2,13 @@
 destino = input("Introduce el destino del envio: ").lower()
 total_orden = float(input("Introduce el total de la orden: "))
 
-if destino in ("españa", "espana"):
+if destino == "españa" or destino == "espana":
 	costo_envio = 5, "US"
 	
-elif destino in ("portugal", "francia", "italia"):
+elif destino == "portugal" or destino == "francia" or destino == "italia":
 	costo_envio = 13, "US"
 	
-elif destino in ("alemania", "holanda"):
+elif destino == "alemania" or destino == "holanda":
 	costo_envio = 15, "US"
 	
 else:
@@ -19,7 +19,6 @@ total_pagar = total_orden + costo_envio[0]
 
 print(f"Costo del envio: ${costo_envio[0]:.2f} {costo_envio[1]}")
 print(f"Total a pagar: ${total_pagar:.2f} {costo_envio[1]}")
-
 
 
 
