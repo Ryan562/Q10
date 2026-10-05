@@ -34,3 +34,64 @@ for producto in productos:
 
     if producto["cantidad"] < 5:
         print("Stock bajo")
+
+######################################################
+
+def sumar(num1, num2):
+    return num1 + num2
+
+
+def restar(num1, num2):
+    return num1 - num2
+
+
+def multiplicar(num1, num2):
+    return num1 * num2
+
+
+def dividir(num1, num2):
+    return num1 / num2
+
+
+while True:
+    print("\n--- MENÚ DE OPERACIONES ---")
+    print("1. Sumar")
+    print("2. Restar")
+    print("3. Multiplicar")
+    print("4. Dividir")
+    print("5. Salir")
+
+    opcion = input("Seleccione una opción: ")
+
+    if opcion == "5":
+        print("Programa terminado.")
+        break
+
+    if opcion == "1" or opcion == "2" or opcion == "3" or opcion == "4":
+
+        num1 = float(input("Ingrese el primer número: "))
+        num2 = float(input("Ingrese el segundo número: "))
+
+        if opcion == "1":
+            resultado = sumar(num1, num2)
+            print("Resultado:", resultado)
+
+        elif opcion == "2":
+            resultado = restar(num1, num2)
+            print("Resultado:", resultado)
+
+        elif opcion == "3":
+            resultado = multiplicar(num1, num2)
+            print("Resultado:", resultado)
+
+        elif opcion == "4":
+            if num2 == 0:
+                print("No se puede dividir entre cero.")
+            else:
+                resultado = dividir(num1, num2)
+                print("Resultado:", resultado)
+
+    else:
+        print("Opción no válida.")
+
+######################################################
